@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return View::make('pages.home');
 });
+
+Route::get('about.html', function() {
+    return View::make('pages.about');
+});
+
+Route::get('contact.html', function() {
+    return View::make('pages.contact');
+});
+
+Route::post('/login', 'LoginController@ajaxRequestPost');
+
